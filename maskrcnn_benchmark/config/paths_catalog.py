@@ -4,12 +4,12 @@
 import os
 
 class DatasetCatalog(object):
-    DATA_DIR = "/content/gliding_vertex/maskrcnn_benchmark/data/datasets"
+    DATA_DIR = "/content/RCNN/maskrcnn_benchmark/data/datasets"
     DATASETS = {
         # NOTE Mingtao
         "dota_trainval_cut": {
-            "img_dir": "/content/gliding_vertex/maskrcnn_benchmark/data/datasets/DOTA/trainval_cut/images",
-            "ann_file": "/content/gliding_vertex/maskrcnn_benchmark/data/datasets/DOTA/trainval_cut/trainval_cut.json"
+            "img_dir": "/content/RCNN/maskrcnn_benchmark/data/datasets/DOTA/trainval_cut/images",
+            "ann_file": "/content/RCNN/maskrcnn_benchmark/data/datasets/DOTA/trainval_cut/trainval_cut.json"
         },
         "dota_test_cut": {
             "img_dir": "/DOTA/test_cut/images",

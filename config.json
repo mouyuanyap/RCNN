@@ -1,6 +1,6 @@
 {
-  "original_root_dir": "/content/DOTA",
-  "target_root_dir": "/content/gliding_vertex/maskrcnn_benchmark/data/datasets/DOTA",
+  "original_root_dir": "/content/drive/MyDrive/DOTA",
+  "target_root_dir": "/content/RCNN/maskrcnn_benchmark/data/datasets/DOTA",
   "sets": [
     {
       "name": "trainval",

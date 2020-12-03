@@ -36,5 +36,5 @@ img_dic["basketball-court"] = img_dic["basketball-court"] * 4
 img_dic["helicopter"] = img_dic["helicopter"] * 8
 
 convert( img_dic, os.path.join( T_ROOT, "trainval_cut" ),  os.path.join( T_ROOT, "trainval_cut", "trainval_cut.json" ) )
-img_dic_test = {"all": [i[:-4] for i in os.listdir( os.path.join( T_ROOT, "test_cut", "images" ) )]}
-convert( img_dic_test, os.path.join( T_ROOT, "test_cut" ),  os.path.join( T_ROOT, "test_cut", "test_cut.json" ) )
+#img_dic_test = {"all": [i[:-4] for i in os.listdir( os.path.join( T_ROOT, "test_cut", "images" ) )]}
+#convert( img_dic_test, os.path.join( T_ROOT, "test_cut" ),  os.path.join( T_ROOT, "test_cut", "test_cut.json" ) )

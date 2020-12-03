@@ -73,6 +73,10 @@ categories = [
         "supercategory": "none",
         "id": 15,
         "name": "helicopter"
+    }, {
+        "supercategory": "none",
+        "id": 16,
+        "name": "container-crane"
     }
 ]
 
@@ -91,7 +95,8 @@ class_dict = {
         'roundabout': 12,
         'harbor': 13,
         'swimming-pool': 14,
-        'helicopter': 15
+        'helicopter': 15,
+        'container-crane': 16
         }
 
 

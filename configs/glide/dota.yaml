@@ -1,4 +1,4 @@
-OUTPUT_DIR: "/content/gliding_vertex/exp_dota"
+OUTPUT_DIR: "/content/RCNN/exp_dota"
 INPUT:
   MIN_SIZE_TRAIN: (1024,)
   MAX_SIZE_TRAIN: 1333
@@ -12,7 +12,7 @@ INPUT:
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
   RATIO_ON: True
-  WEIGHT: "/content/gliding_vertex/maskrcnn_benchmark/data/R-101.pkl"
+  WEIGHT: "/content/RCNN/maskrcnn_benchmark/data/R-101.pkl"
   BACKBONE:
     CONV_BODY: "R-101-FPN"
   RESNETS:
@@ -51,4 +51,4 @@ SOLVER:
   IMS_PER_BATCH: 1
   CHECKPOINT_START_STEP: 30000
 TEST:
-  IMS_PER_BATCH: 12
+  IMS_PER_BATCH: 1
