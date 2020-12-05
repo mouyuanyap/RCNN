@@ -32,7 +32,7 @@ MODEL:
     POOLER_SAMPLING_RATIO: 2
     FEATURE_EXTRACTOR: "FPN2MLPFeatureExtractor"
     PREDICTOR: "FPNRatioPredictor"
-    NUM_CLASSES: 17s
+    NUM_CLASSES: 17
 DATASETS:
   TRAIN: ("Your own dataset",)
   TEST: ("Your own dataset",)
