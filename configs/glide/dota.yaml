@@ -1,4 +1,4 @@
-OUTPUT_DIR: "/content/RCNN/exp_dota"
+OUTPUT_DIR: "/content/drive/MyDrive/exp_dota"
 INPUT:
   MIN_SIZE_TRAIN: (1024,)
   MAX_SIZE_TRAIN: 1333
@@ -37,7 +37,7 @@ MODEL:
     POOLER_SAMPLING_RATIO: 2
     FEATURE_EXTRACTOR: "FPN2MLPFeatureExtractor"
     PREDICTOR: "FPNRatioPredictor"
-    NUM_CLASSES: 16
+    NUM_CLASSES: 17
 DATASETS:
   TRAIN: ("dota_trainval_cut",)
   TEST: ("dota_test_cut",)
@@ -49,6 +49,6 @@ SOLVER:
   STEPS: (30000, 40000)
   MAX_ITER: 60000
   IMS_PER_BATCH: 1
-  CHECKPOINT_START_STEP: 30000
+  CHECKPOINT_START_STEP: 10000
 TEST:
   IMS_PER_BATCH: 1

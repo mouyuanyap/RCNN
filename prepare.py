@@ -10,6 +10,7 @@ O_ROOT = CONFIG["original_root_dir"]
 T_ROOT = CONFIG["target_root_dir"]
 SETs = CONFIG["sets"]
 
+
 # split
 for SET in SETs:
     if SET["only_img"]:
@@ -20,6 +21,7 @@ for SET in SETs:
         split = splitbase( os.path.join( O_ROOT, SET["name"] ), os.path.join( T_ROOT, SET["name"] + "_cut" ), gap=SET["gap"], subsize=1024, num_process=8, padding=False )
     split.splitdata( 1 )
     split.splitdata( 0.5 )
+
 
 # class balancing of training set
 # NOTE This may be not optimal, and you can choose a different strategy.

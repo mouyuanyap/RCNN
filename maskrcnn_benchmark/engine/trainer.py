@@ -101,7 +101,7 @@ def do_train(
 
         eta_seconds = meters.time.global_avg * (max_iter - iteration)
         eta_string = str(datetime.timedelta(seconds=int(eta_seconds)))
-
+        
         if iteration % 20 == 0 or iteration == max_iter:
             logger.info(
                 meters.delimiter.join(
@@ -120,7 +120,10 @@ def do_train(
                     memory=torch.cuda.max_memory_allocated() / 1024.0 / 1024.0,
                 )
             )
+        #print(checkpoint_start_step)
+        #print(checkpoint_period)
         if iteration > checkpoint_start_step and iteration % checkpoint_period == 0:
+            print("save")
             checkpointer.save("model_{:07d}".format(iteration), **arguments)
         if iteration == max_iter:
             checkpointer.save("model_final", **arguments)

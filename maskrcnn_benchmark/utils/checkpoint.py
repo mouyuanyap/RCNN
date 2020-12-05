@@ -43,7 +43,8 @@ class Checkpointer(object):
         if self.scheduler is not None:
             data["scheduler"] = self.scheduler.state_dict()
         data.update(kwargs)
-
+        for key, value in kwargs.items(): 
+            print ("%s: %s" %(key, value)) 
         save_file = os.path.join(self.save_dir, "{}.pth".format(name))
         self.logger.info("Saving checkpoint to {}".format(save_file))
         torch.save(data, save_file)
@@ -61,6 +62,8 @@ class Checkpointer(object):
         checkpoint = self._load_file(f)
         self._load_model(checkpoint)
         if "optimizer" in checkpoint and self.optimizer:
+            #print("opt")
+            #print(checkpoint["optimizer"])
             self.logger.info("Loading optimizer from {}".format(f))
             self.optimizer.load_state_dict(checkpoint.pop("optimizer"))
         if "scheduler" in checkpoint and self.scheduler:
